@@ -1,0 +1,66 @@
+header {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  max-height: 200px;
+  background-color: burlywood;
+
+  padding: 20px;
+
+  font-family: sans-serif;
+}
+
+#logo {
+  display: grid;
+  width: 100%;
+  max-height: 170px;
+}
+h1 {
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  font-size: 40px;
+  margin-top: 0px;
+
+  width: 80%;
+  background-color: burlywood;
+
+  border: 1px solid black;
+  padding: 20px;
+
+  font-family: sans-serif;
+}
+
+div {
+  display: grid;
+  color: green;
+  align-items: center;
+}
+
+main {
+  background-color: pink;
+  margin-top: 0px;
+  padding: 20px;
+}
+
+p {
+  margin: 0px;
+  padding: 20px;
+  font-size: 20px;
+  justify-self: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#intro {
+  display: grid;
+  justify-content: center;
+  color: black;
+}
+@media (min-width: 920px) {
+  h1 {
+    font-size: 75px;
+    align-items: center;
+  }
+  p {
+    font-size: 30px;
+  }
+}
