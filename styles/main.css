@@ -13,19 +13,21 @@ header {
   display: grid;
   width: 100%;
   max-height: 170px;
+  min-height: 85px;
 }
 h1 {
   display: grid;
   justify-items: center;
   justify-self: center;
-  font-size: 40px;
+  font-size: 55px;
   margin-top: 0px;
-
-  width: 80%;
+  margin-bottom: 0px;
+  max-height: 170px;
+  width: 85%;
   background-color: burlywood;
 
   border: 1px solid black;
-  padding: 20px;
+  padding: 10px;
 
   font-family: sans-serif;
 }
@@ -42,7 +44,8 @@ main {
   padding: 20px;
 }
 
-p {
+p,
+ul {
   margin: 0px;
   padding: 20px;
   font-size: 20px;
@@ -55,12 +58,78 @@ p {
   justify-content: center;
   color: black;
 }
+
+li {
+  margin: 0px;
+  padding: 20px;
+  font-size: 19px;
+  justify-self: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style-type: none;
+}
+
+.paragraph-container {
+  display: flex;
+  gap: 20px; /* space between paragraphs */
+  flex-wrap: wrap;
+}
+/* Optional: Make each paragraph take up equal space */
+.paragraph {
+  flex: 1;
+  min-width: 300px;
+  /* Text styles */
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  text-align: justify;
+}
+/* Responsive: for large screens */
 @media (min-width: 920px) {
   h1 {
     font-size: 75px;
-    align-items: center;
+    align-content: center;
   }
-  p {
+  p,
+  li {
+    font-size: 29px;
+  }
+}
+
+/* Responsive: for small screens */
+@media (max-width: 600px) {
+  .paragraph-container {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 35px;
+    padding: 10px;
+  }
+  #logo {
+    display: grid;
+    min-height: 100%;
+  }
+}
+
+/* Responsive for phones */
+@media (max-width: 530px) {
+  h1 {
     font-size: 30px;
+    align-content: center;
+  }
+  p,
+  li {
+    font-size: 16px;
+    padding: 0px;
+  }
+  #logo {
+    display: grid;
+    min-height: 100%;
+  }
+  h1 {
+    padding: 10px;
+  }
+  li {
+    padding: 10px;
   }
 }
